@@ -1,0 +1,71 @@
+/** @format */
+
+@import "Colors";
+
+.footer {
+    background-color: $first;
+    height: 200px;
+    width: 100%;
+    color: $dark;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    .div1 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        > h1 {
+            font: 700 2rem $text1;
+            text-transform: uppercase;
+            color: $third;
+        }
+        > p {
+            font: 500 1.2rem $text1;
+        }
+    }
+    .div2 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        > h4 {
+            font: 700 1.4rem $text2;
+        }
+        > a {
+            text-decoration: none;
+            &:hover {
+                color: $third;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        height: 50vh;
+        padding: 0 0;
+        grid-template-columns: 1fr;
+
+        > div {
+            align-items: center;
+            > h1 {
+                font: 700 1.2rem $text1;
+            }
+            > p {
+                font: 500 0.7rem $text1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+        margin-top: 30vh;
+        height: 50vh;
+    }
+}
